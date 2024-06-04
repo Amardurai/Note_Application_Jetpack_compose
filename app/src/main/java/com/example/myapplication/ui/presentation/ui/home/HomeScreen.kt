@@ -73,8 +73,8 @@ fun HomeScreen(
                         count++
                         val data = NoteData(
                             id = count,
-                            title = "Amar$count",
-                            desc = "Am Native android developer working in walmart product based company$count"
+                            title = "Demo Title $count",
+                            desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Te labore aliquyam"
                         )
                         onEvent(NoteEvent.Insert(data))
                     }) {
@@ -83,7 +83,7 @@ fun HomeScreen(
                     LazyColumn {
                         items(notes ?: emptyList()) {
                             Column {
-                                Text(text = "TiTle ${it.title}")
+                                Text(text = "Title ${it.title}")
                                 Spacer(modifier = Modifier.height(10.dp))
                                 Text(text = "Description ${it.desc}")
                             }
@@ -91,8 +91,6 @@ fun HomeScreen(
                     }
 
                 }
-
-
             }
         }
     }
